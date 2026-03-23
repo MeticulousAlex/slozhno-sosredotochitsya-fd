@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
+    <link rel="icon" href="./images/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/dark.css" />
+    <link rel="stylesheet" href="./styles/light.css" />
     <script src="./scripts/script.js"></script>
   </head>
   <body class="page">
@@ -35,6 +45,165 @@
           </li>
         </ul>
       </nav>
+      <span class="header__rec" aria-hidden="true">REC</span>
+      <h1 class="header__title">no focus</h1>
+      <p class="header__subtitle title-decor">
+        Что делать, когда не можется и не хочется
+      </p>
     </header>
+
+    <main class="content">
+      <section class="section section--why">
+        <h2 class="section__title">Почему сложно сосредоточиться</h2>
+        <div class="section__cards">
+          <article class="section__card">
+            <h3 class="section__card-title title-decor">Многозадачность</h3>
+            <p class="section__card-text">
+              Особенно сложно сосредоточиться, когда задач много и нужно
+              переключаться между ними. Самый эффективный способ — сделать
+              что-то одно, потом перейти к следующему.
+            </p>
+          </article>
+          <article class="section__card">
+            <h3 class="section__card-title title-decor">Дофамин</h3>
+            <p class="section__card-text">
+              С каждым новым уведомлением мозг привыкает получать удовольствие
+              от мелких подачек информации. Со временем мозг уже не может
+              удерживать концентрацию надолго.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--distractions">
+        <h2 class="section__title">Что снижает концентрацию внимания?</h2>
+        <div class="section__cards">
+          <article class="section__card">
+            <h3 class="section__card-title title-decor">Соцсети</h3>
+            <p class="section__card-text">
+              Социальные сети — сами по себе замечательная технология. Но если
+              постоянно их обновлять и пролистывать, сконцентрироваться на
+              рабочей задаче не получится.
+            </p>
+          </article>
+          <article class="section__card">
+            <h3 class="section__card-title title-decor">Еда</h3>
+            <p class="section__card-text">
+              «Быстрые углеводы» — сахар, белый хлеб, сладкие напитки — резко
+              поднимают уровень сахара в крови, а потом резко снижают. Мы
+              чувствуем сонливость и усталость. Переключите внимание на
+              медленные углеводы: полученная из них энергия расходуется
+              равномерно, концентрация не страдает.
+            </p>
+          </article>
+          <article class="section__card">
+            <h3 class="section__card-title title-decor">Гаджеты</h3>
+            <p class="section__card-text">
+              Да-да, это та самая ситуация, когда на экране ноутбука — код, в
+              наушниках — подкаст, а на компьютере фоном — ещё и видео с
+              забавными котиками. Разумная и умеренная гигиена устройств тоже
+              помогает умственному труду.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--tips">
+        <h2 class="section__title">
+          Как концентрироваться лучше, чем&nbsp;всё&nbsp;время?
+        </h2>
+        <div class="section__cards">
+          <h3 class="section__card-title title-decor section__card-title--wide">
+            5 простых (на самом деле не очень) советов
+          </h3>
+          <article class="section__card">
+            <h4 class="section__card-subtitle title-decor">
+              Представьте небо и облака
+            </h4>
+            <p class="section__card-text">
+              Попробуйте представить небо и воображаемые облака, которые
+              неторопливо проплывают мимо. Когда мысль привяжется к облаку,
+              отправьте её в прошлое.
+            </p>
+          </article>
+          <article class="section__card">
+            <h4 class="section__card-subtitle title-decor">
+              Включите музыку
+            </h4>
+            <p class="section__card-text">
+              Но не любую. Исследования показывают, что для активной работы
+              лучше всего подходят мелодии с 60–70 ударами в минуту — такой
+              ритм расслабляет, но не усыпляет.
+            </p>
+          </article>
+          <article class="section__card">
+            <h4 class="section__card-subtitle title-decor">Прогуляйтесь</h4>
+            <p class="section__card-text">
+              Или даже пробегитесь. Лёгкая физическая нагрузка стимулирует
+              выработку нейротрансмиттеров, а свежий воздух — мощный природный
+              кофеин.
+            </p>
+          </article>
+          <article class="section__card">
+            <h4 class="section__card-subtitle title-decor">Хорошо ешьте</h4>
+            <p class="section__card-text">
+              Мы — это то, что мы едим. И то, как мы думаем, тоже! Наш мозг не
+              может нормально работать без нужных питательных веществ. Снижает
+              концентрацию и темп мышления даже лёгкое обезвоживание. Пейте
+              достаточно воды.
+            </p>
+          </article>
+          <article class="section__card">
+            <h4 class="section__card-subtitle title-decor">Читайте</h4>
+            <p class="section__card-text">
+              Настоящие бумажные книги. Это правда помогает с концентрацией:
+              чтение развивает умение удерживать внимание на чём-то одном,
+              освобождает воображение, обогащает словарный запас. Ещё можно
+              <a class="section__link" href="#" target="_blank">подкасты слушать</a>.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery">
+        <h2 class="gallery__title title-decor">А можно в картинках?</h2>
+        <div class="gallery__images">
+          <img
+            class="gallery__image gallery__image--sunset"
+            src="./images/sunset.png"
+            alt="Пасторальный закат над горами в розово-оранжевых тонах"
+            loading="lazy"
+          />
+          <img
+            class="gallery__image gallery__image--ice-cream"
+            src="./images/ice-cream.png"
+            alt="Шарики мороженого с забавными мордочками в вазочке"
+            loading="lazy"
+          />
+          <img
+            class="gallery__image gallery__image--tape"
+            src="./images/tape.png"
+            alt="Аудиокассета с наушниками"
+            loading="lazy"
+          />
+          <img
+            class="gallery__image gallery__image--books"
+            src="./images/books.png"
+            alt="Стопка книг с маленьким растением"
+            loading="lazy"
+          />
+          <img
+            class="gallery__image gallery__image--street"
+            src="./images/street.png"
+            alt="Улица со зданиями в стиле пиксель-арт"
+            loading="lazy"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer decorated-zone">
+      <h2 class="footer__title">focus</h2>
+    </footer>
   </body>
 </html>
