@@ -280,6 +280,7 @@
 
   .section--tips .section__cards {
     grid-column: 2/4;
+    padding-left:10px;
   }
 
   .section--distractions {
@@ -288,12 +289,12 @@
     gap:var(--spacing)
   }
 
-  .section--distractions .section__card-title{
+  .section--distractions .section__card-title {
     grid-column: 1;
     grid-row: 1;
   }
 
-  .section--distractions .section__cards{
+  .section--distractions .section__cards {
     grid-column: 1/4;
     grid-row: 2/5;
   }
@@ -359,6 +360,11 @@
     grid-template-columns: 1fr;
     gap: var(--spacing);
   }
+
+  .section--tips .section__cards {
+    padding-left:0;
+  }
+
 
   .section--distractions .section__cards {
     display: grid;
