@@ -8,5 +8,11 @@
   --font-family: "IBM Plex mono", monospace;
   --font-size: 18px;
   --line-height: 1.3;
-  --spacing: 20px;
+  --spacing: 10px;
+}
+
+@media (width >= 768px) {
+  :root {
+    --spacing: 20px;
+  }
 }

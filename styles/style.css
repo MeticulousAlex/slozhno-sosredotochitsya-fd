@@ -14,7 +14,7 @@
 
 .title-decor {
   background-color: var(--color-accent);
-  color: var(--color-title-text);
+  color: var(--color-text);
 }
 
 /* декоративные уголки */
@@ -30,8 +30,8 @@
   inset-inline-end: var(--spacing);
   inline-size: 25px;
   block-size: 25px;
-  border-block-start: 1px solid var(--color-text);
-  border-inline-end: 1px solid var(--color-text);
+  border-block-start: 1px solid var(--color-decoration);
+  border-inline-end: 1px solid var(--color-decoration);
 }
 
 .decorated-zone::after {
@@ -41,8 +41,8 @@
   inset-inline-start: var(--spacing);
   inline-size: 25px;
   block-size: 25px;
-  border-block-end: 1px solid var(--color-text);
-  border-inline-start: 1px solid var(--color-text);
+  border-block-end: 1px solid var(--color-decoration);
+  border-inline-start: 1px solid var(--color-decoration);
 }
 
 /* хедер */
@@ -57,7 +57,7 @@
 }
 
 .header__theme-menu {
-  align-self: start;
+  align-self: center;
   justify-self: end;
 }
 
@@ -74,11 +74,11 @@
   padding: 2px 13px;
   text-transform: lowercase;
   outline: none;
-  color: var(--color-text);
+  color: var(--color-title-text);
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid color-mix(in srgb, var(--color-text) 40%, transparent);
+  outline: 1px solid color-mix(in srgb, var(--color-title-text) 40%, transparent);
 }
 
 .header__theme-menu-button:focus {
@@ -87,23 +87,23 @@
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-block-end: 1px solid var(--color-text);
+  border-block-end: 1px solid var(--color-title-text);
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  outline: 1px solid var(--color-text);
+  outline: 1px solid var(--color-title-text);
 }
 
 .header__rec {
   position: absolute;
   inset-block-start: var(--spacing);
-  inset-inline-start: var(--spacing);
+  inset-inline-end:calc(var(--spacing) * 2);
   display: flex;
   align-items: center;
   gap: 10px;
   line-height: var(--line-height);
-  color: var(--color-text);
+  color: var(--color-accent);
 }
 
 .header__rec::after {
@@ -121,16 +121,17 @@
   font-size: clamp(7.25rem, 7rem + 1vw, 7.5rem);
   font-weight: bold;
   line-height: 0.825;
-  color: var(--color-text);
+  color: var(--color-header);
   text-shadow: 4px 4px 0 var(--color-accent);
 }
 
 .header__subtitle {
-  align-self: end;
+  align-self: center;
   justify-self: end;
   max-inline-size: 355px;
   font-weight: bold;
-  padding: 4px 5px;
+  box-sizing: border-box;
+  color: var(--color-subtitle-text);
 }
 
 /* основной контент */
@@ -138,32 +139,37 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: calc(var(--spacing) * 2.5);
-  padding: calc(var(--spacing) * 2.5) var(--spacing);
+  gap: calc(var(--spacing) * 5);
+  padding: calc(var(--spacing) * 4) var(--spacing);
 }
 
 .section {
   display: grid;
-  gap: var(--spacing);
+  gap: calc(var(--spacing) * 2);
 }
 
 .section__title {
   font-size: var(--font-size);
   font-weight: bold;
-  color: var(--color-accent);
+  color: var(--color-title-text);
 }
 
 .section__cards {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+}
+
+.section__card{
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
 }
 
 .section__card-title {
+  color: var(--color-subtitle-text);
   font-size: var(--font-size);
   font-weight: bold;
-  margin-block-end: 10px;
-  padding: 3px 5px;
 }
 
 .section__card-title--wide {
@@ -171,10 +177,9 @@
 }
 
 .section__card-subtitle {
+  color: var(--color-subtitle-text);
   font-size: var(--font-size);
   font-weight: normal;
-  margin-block-end: 10px;
-  padding: 3px 5px;
 }
 
 .section__card-text {
@@ -205,7 +210,6 @@
 .gallery__title {
   font-size: var(--font-size);
   font-weight: bold;
-  padding: 3px 5px;
 }
 
 .gallery__images {
@@ -235,7 +239,7 @@
   font-size: clamp(7.25rem, 7rem + 1vw, 7.5rem);
   font-weight: bold;
   line-height: 0.825;
-  color: var(--color-text);
+  color: var(--color-header);
   text-shadow: 2px 2px 0 var(--color-accent);
 }
 
@@ -251,13 +255,17 @@
     max-inline-size: 364px;
   }
 
+  .header__rec {
+    inset-inline-end: calc(1.5 * var(--spacing));
+  }
+
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4vw, 9.8rem);
   }
 
   .content {
     gap: calc(var(--spacing) * 4);
-    padding: calc(var(--spacing) * 4) var(--spacing);
+    padding: calc(var(--spacing) * 3) var(--spacing);
   }
 
   .section--why,
@@ -267,13 +275,21 @@
 
   .section--distractions {
     grid-template-columns: 1fr;
+    gap:var(--spacing)
   }
 
-  .section--distractions .section__cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing);
+  .section--distractions .section__title{
+    inline-size: 32%;
   }
+
+  .section__cards {
+    gap: calc(var(--spacing));
+  }
+
+  .section__card{
+    gap: calc(0.5 * var(--spacing));
+  }
+
 
   .gallery__images {
     grid-template-columns: repeat(3, 1fr);
@@ -313,6 +329,10 @@
     justify-self: center;
   }
 
+  .header__subtitle {
+    max-inline-size: 491px;
+  }
+
   .header__theme-menu-list {
     flex-direction: row;
     gap: 10px;
@@ -320,23 +340,17 @@
 
   .section--why .section__cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--spacing);
-  }
-
-  .section--distractions {
-    grid-template-columns: 1fr 2fr;
   }
 
   .section--distractions .section__cards {
-    grid-template-columns: 1fr;
-  }
-
-  .section--tips .section__cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing);
   }
+
+
 
   .section__card-title--wide {
     grid-column: 1 / -1;
