@@ -12,3 +12,20 @@
 :root.theme-dark .header__rec {
   display: flex;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #f3efec;
+    --color-text: #353430;
+    --color-accent: #FF8DCB;
+    --color-title-text: #FFC2E6;
+    --color-subtitle-text: #000028;
+    --color-header: #DB00FF;
+    --bg-image: url("../images/cover-image-light.png");
+  }
+
+  .header__rec {
+    display: flex;
+  }
+
+}
