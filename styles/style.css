@@ -160,7 +160,7 @@
   gap: calc(var(--spacing) * 2);
 }
 
-.section__card{
+.section__card {
   display: flex;
   flex-direction: column;
   gap: var(--spacing);
@@ -274,24 +274,35 @@
     gap: var(--spacing);
   }
 
-  .section--why .section__cards{
+  .section--why .section__cards {
     grid-column: 2/4;
   }
 
-  .section--tips .section__cards{
+  .section--tips .section__cards {
     grid-column: 2/4;
   }
 
   .section--distractions {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:min-content 1fr 1fr 1fr;
     gap:var(--spacing)
+  }
+
+  .section--distractions .section__card-title{
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .section--distractions .section__cards{
+    grid-column: 1/4;
+    grid-row: 2/5;
   }
 
   .section__cards {
     gap: calc(var(--spacing));
   }
 
-  .section__card{
+  .section__card {
     gap: calc(0.5 * var(--spacing));
   }
 
