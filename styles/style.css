@@ -270,16 +270,21 @@
 
   .section--why,
   .section--tips {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing);
+  }
+
+  .section--why .section__cards{
+    grid-column: 2/4;
+  }
+
+  .section--tips .section__cards{
+    grid-column: 2/4;
   }
 
   .section--distractions {
     grid-template-columns: 1fr;
     gap:var(--spacing)
-  }
-
-  .section--distractions .section__title{
-    inline-size: 32%;
   }
 
   .section__cards {
